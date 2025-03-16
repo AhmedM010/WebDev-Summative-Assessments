@@ -1,0 +1,33 @@
+/* Styling for the body */
+body {
+    background-color: #A4C8E1; /* Soft blue background */
+    font-family: Arial, sans-serif; /* The font that the page will use */
+    color: #333333; /* Dark gray text color to copy pencil lead color*/
+    padding: 2rem; /* Adds padding around the body */
+    margin: 0; /* Removes default margin */
+}
+/* Styling for the main title */
+h1 {
+    text-align: center; /* Centering the text */
+  }
+  
+/* Styling for the sticky note */
+.sticky-note {
+    background-color: #fcf487; /* Light yellow background to mimic the sticky note color*/
+    border-radius: 15px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the sticky note */
+    box-shadow: 2px 2px 10px #00000033; /* Subtle shadow for depth */
+    max-width: 400px; /* Maximum width of the sticky note */
+    margin: 2rem auto; /* Center the sticky note with margin */
+}
+
+/* Styling for the sticky note title */
+.sticky-note h2 {
+    color: #222222; /* Darker gray for the title */
+    margin-top: 0; /* Removes top margin */
+}
+
+/* Styling for the sticky note paragraph */
+.sticky-note p {
+    margin-bottom: 0; /* Removes bottom margin */
+}

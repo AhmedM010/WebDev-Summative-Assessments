@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif; /* Font style for the entire page */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #969696; /* Light gray background color */
+}
+
+/* Navigation bar styles */
+nav {
+    background: #065fbe; /* Blue background for the nav */
+    color: white; /* White text color */
+    padding : 10px 0; /* Padding for the nav */
+    text-align: center; /* Center align the nav items */
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation list item styles */
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between nav items */
+}
+
+/* Navigation link styles */
+nav a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+/* Section styles */
+.section {
+    padding: 20px; /* Padding for each section */
+    margin: 2rem auto; /* Margin around each section with centering*/
+    background: #f3f3f3; /* White background for sections */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px #0000001a; /* Subtle shadow for depth */
+    text-align: left;
+    color: #333333;
+    max-width: 40rem;
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #333333; /* Dark gray color for headings */
+}
+
+/* Button styles */
+.button {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    background: #449eb9; /* sky blue background for the button */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from button */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.button:hover {
+    background: #2e6575; /* Darker sky blue on hover */
+}
+
+/* Button styles */
+.navbutton {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    background: #2e79ca; /*Blue background for the button */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline from button */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.navbutton:hover {
+    background: #1b4b80; /* Darker blue on hover */
+}
