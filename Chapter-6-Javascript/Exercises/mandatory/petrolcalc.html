@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- This declaration defines the document type and version of HTML being used. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document (UTF-8 supports many characters). -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and scales correctly on different devices. -->
+    
+    <title>Petrol Cost Calculator</title>
+    <!-- Sets the title of the webpage, which appears in the browser tab. -->
+    
+    <link rel="stylesheet" href="calcstyle.css">
+    <!-- Links to an external CSS file (calcstyle.css) for styling the HTML elements. -->
+</head>
+<body>
+    <h1>Petrol Cost Calculator</h1>
+    <!-- Main heading of the page, indicating the purpose of the application. -->
+    
+    <label for="petrolCost">Cost per Liter:</label>
+    <!-- Label for the petrol cost input field. The 'for' attribute associates it with the input field with the ID 'petrolCost'. -->
+    
+    <input type="number" id="petrolCost" value="1.72" step="0.01">
+    <!-- Input field for the user to enter the cost of petrol per liter.
+         - type="number": Specifies that the input should be a numeric value.
+         - id="petrolCost": Unique identifier for the input field.
+         - value="1.72": Default value for the input field.
+         - step="0.01": Allows the user to enter values in increments of 0.01. -->
+    
+    <label for="litersPurchased">Liters Purchased:</label>
+    <!-- Label for the liters purchased input field. The 'for' attribute associates it with the input field with the ID 'litersPurchased'. -->
+    
+    <input type="number" id="litersPurchased" value="0" step="0.001">
+    <!-- Input field for the user to enter the number of liters purchased.
+         - type="number": Specifies that the input should be a numeric value.
+         - id="litersPurchased": Unique identifier for the input field.
+         - value="0": Default value for the input field.
+         - step="0.001": Allows the user to enter values in increments of 0.001 for more precision. -->
+    
+    <button id="calculateButton">Calculate</button>
+    <!-- Button that the user clicks to calculate the total cost. The ID 'calculateButton' is used to reference it in JavaScript. -->
+    
+    <p id="totalCost">Total Cost: $0.00</p>
+    <!-- Paragraph element to display the total cost of petrol purchased. The ID 'totalCost' is used to update its content dynamically with JavaScript. -->
+    
+    <script src="script.js"></script>
+    <!-- Links to an external JavaScript file (script.js) that contains the logic for calculating the total cost. -->
+</body>
+</html>
+

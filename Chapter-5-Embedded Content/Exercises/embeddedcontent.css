@@ -1,0 +1,19 @@
+/* Basic reset to ensure consistent styling across browsers */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    display: flex; /* Use flexbox layout for the body */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Set body height to full viewport height */
+    background-color: #f0f0f0; /* Set a light gray background color */
+}
+
+video {
+    max-width: 100%; /* Make the video responsive, so it doesn't exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio of the video */
+}

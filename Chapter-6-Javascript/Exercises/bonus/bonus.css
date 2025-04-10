@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font family to Arial, with a fallback to sans-serif */
+    text-align: center; /* Centers the text within the body */
+    margin: 50px; /* Adds a margin of 50 pixels around the body content */
+    background-color: #f0f0f0; /* Light gray background similar to the paperclips theme */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px #00000060; /* Subtle shadow effect */
+}
+
+.rgb-value {
+    font-size: 24px; /* Font size for RGB value */
+    margin-bottom: 20px; /* Space below the RGB value */
+    color: #333333; /* Dark gray text color */
+}
+
+.color-options {
+    display: flex; /* Enables flexbox for color options */
+    justify-content: center; /* Centers color options */
+    margin-bottom: 20px; /* Space below color options */
+}
+
+.color-option {
+    width: 100px; /* Width of each color option */
+    height: 100px; /* Height of each color option */
+    margin: 0 10px; /* Horizontal margin */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.color-option:hover {
+    border: 5px solid #000000; /* Black border on hover */
+}
+
+.result {
+    font-size: 20px; /* Font size for result text */
+    margin-bottom: 20px; /* Space below result text */
+    color: #555555; /* Medium gray text color */
+}
+
+.lives {
+    font-size: 18px; /* Font size for lives text */
+    margin-bottom: 20px; /* Space below lives text */
+    color: #777777; /* Light gray text color */
+}
+
+#replay-button {
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#replay-button:hover {
+    background-color: #dddddd; /* Light gray background on hover */
+    color: #333333; /* Dark gray text color on hover */
+}
+
+.hidden {
+    display: none; /* Hides elements with this class */
+}

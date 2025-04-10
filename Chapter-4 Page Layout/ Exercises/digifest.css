@@ -1,0 +1,134 @@
+/* RESET / BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Body font: Arial, 400 */
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* HEADER */
+header {
+  background-color: #17072b; /* Header color */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Stack logo and nav vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 1rem;
+}
+
+.logo h1 {
+  font-family: Tahoma, sans-serif; /* Heading font: Tahoma, 700 */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem; /* Add some space below the logo */
+}
+
+/* NAVIGATION */
+nav {
+  display: flex; /* Use flexbox for nav items */
+  justify-content: center; /* Center nav items */
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  margin-left: 1rem; /* Space between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* MAIN SECTION LAYOUT */
+main {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin: 1rem;
+  gap: 1rem;
+}
+
+#welcome {
+  flex: 3;
+  min-width: 50%;
+  max-width: 65%;
+}
+
+#welcome h2 {
+  font-family: Tahoma, sans-serif; /* Heading font */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#welcome p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.code-snippet {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* ASIDE: LINE UP */
+#line-up {
+  flex: 1;
+  min-width: 200px;
+  background-color: #172d67; /* Sidebar color */
+  color: #ffffff;
+  padding: 1rem;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+#line-up h2 {
+  font-family: Tahoma, sans-serif;
+  font-weight: bold; /* Corrected from font-style to font-weight */
+  margin-bottom: 0.5rem;
+}
+
+#line-up ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Allow the list to take available space */
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin-top: auto; /* Push images to the bottom */
+}
+
+.images-container img {
+  width: 48.5%;      /* Sets width of object */
+  height: 13vw;
+  object-fit: cover; /* Ensures the image fills the square */
+}
+
+/* FOOTER */
+footer { 
+  background-color: #8c15e9; /* Footer color */ 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 0.5rem; 
+  margin-top: 0; /* Remove margin-top to avoid spacing issues */ 
+  position: fixed; /* Fix the footer to the bottom */ 
+  bottom: 0; /* Position it at the bottom */ 
+  width: 100%; /* Ensure it spans the full width */ 
+  z-index: 10; /* Ensure it appears above other content */ 
+}
+
+footer p {
+  margin: 0;
+}

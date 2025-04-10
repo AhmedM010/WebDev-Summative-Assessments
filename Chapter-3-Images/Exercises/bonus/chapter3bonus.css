@@ -1,0 +1,65 @@
+/* Styles for div with class 'a' */
+div.a {
+    display: inline-block; /* Display as inline-block for side-by-side layout */
+    font-family: sans-serif; /* Font family for text */
+    font-size: 20px; /* Font size for text */
+    margin: 25px; /* Margin around the div */
+    border: 4px solid #8a2ae3; /* Solid border with a specific color */
+    box-shadow: 10px 10px 10px #ff0000; /* Shadow effect */
+    line-height: 100px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+}
+
+/* Styles for div with class 'b' */
+div.b {
+    display: inline-block; /* Display as inline-block for side-by-side layout */
+    font-family: sans-serif; /* Font family for text */
+    font-size: 20px; /* Font size for text */
+    margin: 25px; /* Margin around the div */
+    border: 4px solid #00ff00; /* Solid border with a specific color */
+    box-shadow: inset 10px 10px 10px #000000; /* Inset shadow effect */
+    line-height: 100px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+}
+
+/* Styles for div with class 'c' */
+div.c {
+    display: inline-block; /* Display as inline-block for side-by-side layout */
+    font-family: sans-serif; /* Font family for text */
+    font-size: 20px; /* Font size for text */
+    margin: 25px; /* Margin around the div */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 
+        0px 0px 0px 4px #ff8b00, /* Outer shadow with multiple layers */
+        0px 0px 0px 10px #0000ff,
+        0px 0px 0px 20px #ff0000,
+        0px 0px 0px 30px #008001;
+    line-height: 100px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+}
+
+/* Styles for div with class 'd' */
+div.d {
+    display: inline-block; /* Display as inline-block for side-by-side layout */
+    font-family: sans-serif; /* Font family for text */
+    font-size: 20px; /* Font size for text */
+    margin: 25px; /* Margin around the div */
+    border: 4px solid #b22222; /* Solid border with a specific color */
+    text-shadow: 5px 5px 1px #000000; /* Shadow effect for text */
+    line-height: 100px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+}
+
+/* Body styles */
+body {
+    margin: 100px auto; /* Center the body content with auto margins */
+    width: max-content; /* Set width to the maximum content size */
+}

@@ -1,0 +1,24 @@
+/* Style for the body of the document */
+body {
+    font-family: Arial, sans-serif; /* Sets the font family to Arial, with a fallback to sans-serif */
+    text-align: center; /* Centers the text within the body */
+    margin: 3.125em;/* Adds a margin of 50 pixels around the body content */
+}
+
+/* Style for input fields and buttons */
+input, button {
+    margin: 0.625em; /* Adds a margin of 10 pixels around input fields and buttons */
+    padding: 0.625em; /* Adds padding of 10 pixels inside input fields and buttons for better spacing */
+}
+
+/* Style specifically for buttons */
+button {
+    cursor: pointer;/* Changes the cursor to a pointer when hovering over the button, indicating it's clickable */
+}
+
+/* Style for button hover effect */
+button:hover {
+    background-color: #dddddd;/* Changes the background color of the button to a light gray when hovered over */
+}
+
+/* HEAVILY inspired by https://www.decisionproblem.com/paperclips/  And idle game about paperclips*/

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>!guess the color!</title> <!-- Title of the webpage displayed in the browser tab -->
+    <link rel="stylesheet" href="bonus.css"> <!-- Links to the external CSS file for styling -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for the game elements -->
+        <h1>!guess the color!</h1> <!-- Main heading of the game -->
+        <div id="rgb-value" class="rgb-value"></div> <!-- Displays the RGB value of the target color -->
+        <div id="color-options" class="color-options"></div> <!-- Container for color options that the user can choose from -->
+        <div id="result" class="result"></div> <!-- Displays the result of the user's guess (correct/incorrect) -->
+        <div id="lives" class="lives"></div> <!-- Displays the number of lives remaining for the user -->
+        <button id="replay-button" class="hidden">Replay</button> <!-- Button to replay the game, initially hidden -->
+    </div>
+    <script src="bonus.js"></script> <!-- Links to the external JavaScript file for game logic -->
+</body>
+</html>
