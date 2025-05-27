@@ -1,0 +1,1062 @@
+/* Import custom font from CDN */
+@import url("https://fonts.cdnfonts.com/css/quiet-sans");
+
+/* Base styles for html and body */
+body,
+html {
+  font-family: "Quiet Sans", sans-serif;
+  overflow: visible; /* Allow scrolling */
+}
+
+/* Fixed background image that covers entire viewport */
+.BackgroundImage {
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  object-fit: cover; /* Maintain aspect ratio while filling container */
+  position: fixed;
+  z-index: -1; /* Behind all other content */
+}
+
+/* Initial landing screen overlay */
+.ClickToContinue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+  backdrop-filter: blur(25px); /* Blur effect */
+  -webkit-backdrop-filter: blur(25px); /* Safari support */
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.75s ease; /* Smooth fade transition */
+  -webkit-user-select: none; /* Prevent text selection */
+  -moz-user-select: none;
+  user-select: none;
+  z-index: 9999; /* Highest layer */
+}
+
+/* Fade out effect for landing screen */
+.ClickToContinue.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Disable interactions when faded */
+}
+
+/* Landing screen text container */
+.ClickToContinueText {
+  color: white;
+  object-position: center;
+  text-align: center;
+}
+
+/* Main landing title */
+.TopLandingText {
+  margin-top: 0;
+  font-weight: 1000; /* Extra bold */
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+/* Landing screen subtitle */
+.BottomLandingText {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 0.75em;
+}
+
+/* Blur overlay for main page background */
+.BlurMainPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* Don't block interactions */
+  backdrop-filter: blur(15px); /* Background blur effect */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+}
+
+/* Main content container */
+.MainPage {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 100%; /* Initially positioned below viewport */
+  z-index: 1;
+  pointer-events: none; /* Initially non-interactive */
+  transition: 0.75s ease; /* Smooth slide animation */
+}
+
+/* Slide-in animation for main page */
+.MainPage.slide-in {
+  top: 0; /* Move to visible position */
+  pointer-events: auto; /* Enable interactions */
+}
+
+/* Main content card with glassmorphism effect */
+.FrontCard {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.075); /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+  border-radius: 20px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 10px;
+  width: 750px;
+  height: 500px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25); /* Drop shadow */
+  color: #fff;
+}
+
+/* Profile picture and welcome section container */
+.PicAndWelcome {
+  order: 0;
+  flex: 3 3 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  gap: 15px;
+  max-height: 115px;
+}
+
+/* Profile picture styling */
+.Pic {
+  order: 0;
+  flex: 1 1 auto;
+  width: 100px;
+  max-height: 100px;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular shape */
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  position: relative;
+}
+
+/* User avatar image */
+.UserAvatarImg {
+  border-radius: 50%;
+  height: 100px;
+  min-width: 80px;
+  object-fit: cover; /* Maintain aspect ratio */
+  width: 100px;
+}
+
+/* Username and welcome text container */
+.UserAndWelcome {
+  order: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+}
+
+/* Username and icon row */
+.UserAndIcon {
+  order: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 50px;
+  width: 100%;
+}
+
+/* Decorative user icon */
+.UserIcon {
+  order: 1;
+  flex: 1 1 auto;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  display: block;
+}
+
+.UserIcon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Username text styling */
+.Username {
+  order: 0;
+  flex: 3 3 auto;
+  align-self: auto;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+/* Welcome message and icon row */
+.WelcomeAndIcon {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 50px;
+}
+
+/* Decorative welcome icon */
+.WelcomeIcon {
+  order: 0;
+  flex: 1 1 auto;
+  width: 50px;
+  height: 50px;
+  margin-right: auto;
+  display: block;
+}
+
+.WelcomeIcon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Welcome message text styling */
+.Welcome {
+  order: 1;
+  flex: 3 3 auto;
+  align-self: auto;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: right;
+}
+
+/* Primary button text styling */
+.PrimaryButtonText {
+  font-family: "Quiet Sans", sans-serif;
+  color: white;
+  font-weight: 500;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Reusable glass card component with hover effects */
+.GlassCard {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Glass card hover effects */
+.GlassCard:hover {
+  background: rgba(255, 255, 255, 0.15); /* Lighter on hover */
+  transform: translateY(-10px); /* Lift effect */
+}
+
+/* Skills and Projects navigation section */
+.SkillAndProjects {
+  order: 1;
+  flex: 5 5 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  gap: 15px 15px;
+}
+
+.SkillAndProjects .PrimaryButtonText {
+  font-size: 3rem;
+}
+
+/* About Me section */
+.AboutMe {
+  order: 2;
+  flex: 5 5 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  gap: 15px;
+}
+
+.AboutMe .GlassCard {
+  max-width: 353.21px;
+}
+
+.AboutMe .PrimaryButtonText {
+  font-size: 3rem;
+}
+
+/* Social media links section */
+.Socials {
+  order: 3;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  position: relative;
+  gap: 15px;
+}
+
+/* Social media icons container */
+.SocialsIconBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+/* Social media icon styling */
+.SocialsIconBox img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+/* Social media icon hover effect */
+.SocialsIconBox img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Popup overlay for confirmations */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  backdrop-filter: blur(4px);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Above main content */
+}
+
+/* Popup content styling */
+.popup-overlay .GlassCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 11;
+  max-height: 450px;
+  max-width: 600px;
+  padding: 10px;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+/* Popup header text */
+.TopPopupText {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  display: flex;
+  text-align: center;
+}
+
+/* Project options container in popup */
+.ProjectOptions {
+  order: 1;
+  flex: 6 6 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  gap: 15px;
+  width: 100%;
+}
+
+.ProjectOptions .GlassCard {
+  order: 0;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 2rem;
+}
+
+/* Popup close button container */
+.PopupClose {
+  order: 2;
+  flex: 1 1 auto;
+  display: flex;
+  border-radius: 10px;
+}
+
+/* Button styling for popups */
+.PopupClose button,
+.VisitOrCancel button {
+  padding: 0px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Quiet Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Popup close button hover effect */
+.PopupClose:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+}
+
+/* Confirmation popup text styling */
+.AreYouSure,
+.ConfirmLink {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.ConfirmLink .GlassCard {
+  padding: 15px 25px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  max-width: none;
+}
+
+/* Visit or cancel button container */
+.VisitOrCancel {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation bar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.075);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 100; /* Above most content */
+}
+
+/* Navigation left section */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation item styling */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Navigation item hover effect */
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown menu container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  backdrop-filter: blur(50px);
+  background: rgba(0, 0, 0, 0.763);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  min-width: 91.8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: -5px;
+}
+
+/* Dropdown hover area expansion */
+.dropdown:hover {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown link styling */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown link hover effect */
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Page container for content pages */
+.page-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px; /* Account for fixed navbar */
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+  width: auto;
+}
+
+.page-container .PrimaryButtonText {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* Page title styling */
+.page-title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* Skills section container */
+.skills-section {
+  margin-bottom: 50px;
+}
+
+/* Section title styling */
+.section-title {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* Skills grid layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Individual skill card */
+.skill-card {
+  padding: 15px;
+  text-align: center;
+  min-height: 200px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Skill title styling */
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Skill description text */
+.skill-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  width: 100%;
+}
+
+/* Progress bar container */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+/* Progress bar fill with gradient */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff88, #00ccff);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Roadmap section */
+.roadmap-section {
+  margin-top: 50px;
+}
+
+/* Roadmap grid layout */
+.roadmap-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+.roadmap-grid .GlassCard {
+  flex-direction: column;
+  max-width: 650px;
+}
+
+/* Individual roadmap card */
+.roadmap-card {
+  padding: 15px;
+  min-height: 400px;
+}
+
+/* Roadmap title styling */
+.roadmap-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Roadmap list styling */
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual roadmap item */
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Custom checkbox for roadmap items */
+.roadmap-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Checked state for roadmap checkbox */
+.roadmap-checkbox.checked {
+  background: linear-gradient(45deg, #01363b, #00ccff);
+  border-color: #00000033;
+}
+
+/* Checkmark for completed items */
+.roadmap-checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* GitHub link styling */
+.github-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.github-link a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+  color: #00ff88;
+}
+
+/* Projects page container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project row layout */
+.project-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Reversed project row for alternating layout */
+.project-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Project demo section */
+.project-demo {
+  order: 0;
+  display: flex;
+  flex: 2 2 auto;
+  height: 100%;
+}
+
+/* Project info section */
+.project-info {
+  order: 1;
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+/* Project demo and info card styling */
+.project-demo .GlassCard,
+.project-info .GlassCard {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Project images */
+.GlassCard img {
+  object-fit: cover;
+  max-width: 500px;
+}
+
+/* Project description text */
+.project-description {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.project-description .PrimaryButtonText {
+  color: white;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+/* About me text styling */
+.aboutme-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  width: 100%;
+}
+
+/* About me card */
+.aboutme-card {
+  padding: 15px;
+  text-align: left;
+  min-height: 200px;
+  max-width: 730px;
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE DESIGN - Tablet and Mobile */
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  /* Stack project rows vertically on smaller screens */
+  .project-row,
+  .project-row.reverse {
+    flex-direction: column;
+  }
+
+  /* Reduce navigation spacing */
+  .nav-right {
+    gap: 15px;
+  }
+
+  /* Smaller navigation items */
+  .nav-item {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  /* Responsive main card */
+  .FrontCard {
+    width: 90%;
+    height: auto;
+    padding: 20px 15px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Smaller text on mobile */
+  .TopLandingText,
+  .Welcome,
+  .Username {
+    font-size: 1.75rem;
+  }
+
+  .BottomLandingText {
+    font-size: 0.9rem;
+  }
+
+  /* Stack user info vertically on mobile */
+  .UserAndIcon,
+  .WelcomeAndIcon {
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+  }
+
+  /* Stack picture and welcome vertically */
+  .PicAndWelcome {
+    flex-direction: column;
+    max-height: none;
+    gap: 10px;
+  }
+
+  /* Smaller profile picture */
+  .Pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .UserAvatarImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Smaller decorative icons */
+  .UserIcon img,
+  .WelcomeIcon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Stack navigation sections vertically */
+  .SkillAndProjects,
+  .AboutMe {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Full width glass cards on mobile */
+  .GlassCard {
+    width: 100%;
+    min-height: 120px;
+  }
+
+  /* Adjust social media icons layout */
+  .SocialsIconBox {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* Smaller social media icons */
+  .SocialsIconBox img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Responsive popup styling */
+  .popup-overlay .GlassCard {
+    width: 90%;
+    max-height: 90vh;
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  /* Stack project options vertically in popup */
+  .ProjectOptions {
+    flex-direction: column;
+  }
+
+  /* Smaller popup buttons */
+  .PopupClose button,
+  .VisitOrCancel button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  /* Mobile projects container */
+  .projects-container {
+    padding: 10px;
+  }
+
+  /* Smaller project description text */
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-description .PrimaryButtonText {
+    font-size: 1.5rem;
+  }
+
+  /* Stack all project rows vertically */
+  .project-row,
+  .project-row.reverse {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Responsive project cards */
+  .project-demo .GlassCard,
+  .project-info .GlassCard {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Responsive project images */
+  .GlassCard img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* Mobile navigation adjustments */
+  .nav-right {
+    gap: 15px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  /* Smaller page titles on mobile */
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* Single column grid on mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Increased padding for mobile cards */
+  .skill-card,
+  .roadmap-card {
+    padding: 20px;
+  }
+  .page-container {
+    padding: 10px;
+    margin-top: 70px;
+    overflow-x: hidden;
+  }
+
+  .aboutme-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .aboutme-card {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .FrontCard {
+    margin: 0 5px;
+    box-sizing: border-box;
+  }
+}
